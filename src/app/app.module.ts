@@ -10,6 +10,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
 import { MatTabsModule } from "@angular/material/tabs";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [AppComponent, FoodSelectionComponent],
@@ -22,6 +23,7 @@ import { MatTabsModule } from "@angular/material/tabs";
     MatCardModule,
     MatIconModule,
     MatTabsModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
