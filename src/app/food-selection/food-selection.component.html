@@ -12,8 +12,14 @@
     <li>Pizzas</li>
     <li>Panquecas</li>
     <li>Massas</li>
-    <mat-slide-toggle class="example-margin slide"></mat-slide-toggle>
-    <mat-slide-toggle class="example-margin slide"></mat-slide-toggle>
+    <mat-slide-toggle
+      (click)="check('lanche')"
+      class="example-margin slide"
+    ></mat-slide-toggle>
+    <mat-slide-toggle
+      (click)="check('pizza')"
+      class="example-margin slide"
+    ></mat-slide-toggle>
     <mat-slide-toggle class="example-margin slide"></mat-slide-toggle>
     <mat-slide-toggle class="example-margin slide"></mat-slide-toggle>
   </ul>
@@ -24,45 +30,105 @@
 <div class="content-card-second shadow-card">
   <h5>OffBurguer</h5>
 
-  <h1 style="padding-top: 10rem">Lanches</h1>
+  <div *ngIf="this.isCheckedLanche">
+    <h1 style="padding-top: 10rem">Lanches</h1>
 
-  <h2>x-off</h2>
-  <h3>
-    Pão brioche, hamburguer carne bovina 90gr ao molho barbecue, cheddar
-    <h2>R$27,99</h2>
-    <mat-icon *ngIf="!this.expandOff" class="icon" (click)="expand('off')"
-      >keyboard_arrow_right</mat-icon
-    >
-    <mat-icon *ngIf="this.expandOff" class="icon" (click)="expand('off')"
-      >keyboard_arrow_left</mat-icon
-    >
-  </h3>
+    <h2>x-off</h2>
+    <h3>
+      Pão brioche, hamburguer carne bovina 90gr ao molho barbecue, cheddar
+      <h2>R$27,99</h2>
+      <mat-icon *ngIf="!this.expandOff" class="icon" (click)="expand('off')"
+        >keyboard_arrow_right</mat-icon
+      >
+      <mat-icon *ngIf="this.expandOff" class="icon" (click)="expand('off')"
+        >keyboard_arrow_left</mat-icon
+      >
+    </h3>
 
-  <h2>x-house</h2>
-  <h3>
-    Pão brioche, 2 hamburgueres de carne bovina 180gr ao molho barbecue,
-    cheddar, mussarela, parmessão
-    <h2>R$39,99</h2>
-    <mat-icon *ngIf="!this.expandHouse" class="icon" (click)="expand('house')"
-      >keyboard_arrow_right</mat-icon
-    >
-    <mat-icon *ngIf="this.expandHouse" class="icon" (click)="expand('house')"
-      >keyboard_arrow_left</mat-icon
-    >
-  </h3>
+    <h2>x-house</h2>
+    <h3>
+      Pão brioche, 2 hamburgueres de carne bovina 180gr ao molho barbecue,
+      cheddar, mussarela, parmessão
+      <h2>R$39,99</h2>
+      <mat-icon *ngIf="!this.expandHouse" class="icon" (click)="expand('house')"
+        >keyboard_arrow_right</mat-icon
+      >
+      <mat-icon *ngIf="this.expandHouse" class="icon" (click)="expand('house')"
+        >keyboard_arrow_left</mat-icon
+      >
+    </h3>
 
-  <h2>x-extra house</h2>
-  <h3>
-    Pão brioche, 2 hamburgueres de carne bovina 180gr ao molho barbecue,
-    cheddar, queijo prato, cebola caramelizada, picles
-    <h2>R$58,99</h2>
-    <mat-icon *ngIf="!this.expandExtra" class="icon" (click)="expand('extra')"
-      >keyboard_arrow_right</mat-icon
-    >
-    <mat-icon *ngIf="this.expandExtra" class="icon" (click)="expand('extra')"
-      >keyboard_arrow_left</mat-icon
-    >
-  </h3>
+    <h2>x-extra house</h2>
+    <h3>
+      Pão brioche, 2 hamburgueres de carne bovina 180gr ao molho barbecue,
+      cheddar, queijo prato, cebola caramelizada, picles
+      <h2>R$58,99</h2>
+      <mat-icon *ngIf="!this.expandExtra" class="icon" (click)="expand('extra')"
+        >keyboard_arrow_right</mat-icon
+      >
+      <mat-icon *ngIf="this.expandExtra" class="icon" (click)="expand('extra')"
+        >keyboard_arrow_left</mat-icon
+      >
+    </h3>
+  </div>
+
+  <div *ngIf="this.isCheckedPizza">
+    <h1 style="padding-top: 10rem">Pizzas</h1>
+
+    <h2>Pizza-off chicken</h2>
+    <h3>
+      Frango desfiado, catupiry e borda recheada com cheddar
+      <h2>R$30,99</h2>
+      <mat-icon
+        *ngIf="!this.expandOffPizza"
+        class="icon"
+        (click)="expandPizza('off')"
+        >keyboard_arrow_right</mat-icon
+      >
+      <mat-icon
+        *ngIf="this.expandOffPizza"
+        class="icon"
+        (click)="expandPizza('off')"
+        >keyboard_arrow_left</mat-icon
+      >
+    </h3>
+
+    <h2>Pizza-extra 4 mil queijos</h2>
+    <h3>
+      Queijo prato, queijo mussarela, queijo parmessão, queijo de búfala
+      <h2>R$55,99</h2>
+      <mat-icon
+        *ngIf="!this.expandQueijoPizza"
+        class="icon"
+        (click)="expandPizza('queijo')"
+        >keyboard_arrow_right</mat-icon
+      >
+      <mat-icon
+        *ngIf="this.expandQueijoPizza"
+        class="icon"
+        (click)="expandPizza('queijo')"
+        >keyboard_arrow_left</mat-icon
+      >
+    </h3>
+
+    <h2>Pizza badassHouse</h2>
+    <h3>
+      Calabresa, lombo canadense, bacon, salame, cheddar, frango, milho
+      <h2>R$58,99</h2>
+      <mat-icon
+        *ngIf="!this.expandBadassPizza"
+        class="icon"
+        (click)="expandPizza('badass')"
+        >keyboard_arrow_right</mat-icon
+      >
+      <mat-icon
+        *ngIf="this.expandBadassPizza"
+        class="icon"
+        (click)="expandPizza('badass')"
+        >keyboard_arrow_left</mat-icon
+      >
+    </h3>
+  </div>
 
   <footer>copyright 2022 &copy; offBurguer</footer>
 </div>
