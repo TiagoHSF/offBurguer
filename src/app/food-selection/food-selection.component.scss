@@ -7,6 +7,17 @@
   border-radius: 2rem;
 }
 
+.content-card-second {
+  padding-top: 9rem;
+  padding-left: 60rem;
+  position: relative;
+  top: -63rem;
+  width: 82rem;
+  height: 58rem;
+  margin-left: 3rem;
+  border-radius: 2rem;
+}
+
 .content-list {
   list-style-type: none;
   height: 26rem;
@@ -22,6 +33,22 @@ footer {
 
 li {
   margin-bottom: 7rem;
+}
+
+
+h1 {
+  padding-top: 4rem !important;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+h3 {
+  display: flex;
+  padding-left: 3rem;
 }
 
 h5 {
@@ -54,4 +81,10 @@ h5 {
   69px 67px 96px rgba(0, 0, 0, 0.19)
 ;
   border-radius: 10rem;
+}
+
+.icon {
+  font-size: 4rem;
+  position: relative;
+  top: -1rem;
 }

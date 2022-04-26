@@ -1,3 +1,9 @@
+<!-- <mat-icon>shopping_cart</mat-icon> CART SHOP -->
+
+<!-- <mat-icon>keyboard_arrow_right</mat-icon> -->
+
+<!-- <mat-icon>keyboard_arrow_right</mat-icon> -->
+
 <div class="content-card shadow-card">
   <h5>FOOD SELECTOR</h5>
   <h3>by OffBurguer</h3>
@@ -11,6 +17,52 @@
     <mat-slide-toggle class="example-margin slide"></mat-slide-toggle>
     <mat-slide-toggle class="example-margin slide"></mat-slide-toggle>
   </ul>
+
+  <footer>copyright 2022 &copy; offBurguer</footer>
+</div>
+
+<div class="content-card-second shadow-card">
+  <h5>OffBurguer</h5>
+
+  <h1 style="padding-top: 10rem">Lanches</h1>
+
+  <h2>x-off</h2>
+  <h3>
+    Pão brioche, hamburguer carne bovina 90gr ao molho barbecue, cheddar
+    <h2>R$27,99</h2>
+    <mat-icon *ngIf="!this.expandOff" class="icon" (click)="expand('off')"
+      >keyboard_arrow_right</mat-icon
+    >
+    <mat-icon *ngIf="this.expandOff" class="icon" (click)="expand('off')"
+      >keyboard_arrow_left</mat-icon
+    >
+  </h3>
+
+  <h2>x-house</h2>
+  <h3>
+    Pão brioche, 2 hamburgueres de carne bovina 180gr ao molho barbecue,
+    cheddar, mussarela, parmessão
+    <h2>R$39,99</h2>
+    <mat-icon *ngIf="!this.expandHouse" class="icon" (click)="expand('house')"
+      >keyboard_arrow_right</mat-icon
+    >
+    <mat-icon *ngIf="this.expandHouse" class="icon" (click)="expand('house')"
+      >keyboard_arrow_left</mat-icon
+    >
+  </h3>
+
+  <h2>x-extra house</h2>
+  <h3>
+    Pão brioche, 2 hamburgueres de carne bovina 180gr ao molho barbecue,
+    cheddar, queijo prato, cebola caramelizada, picles
+    <h2>R$58,99</h2>
+    <mat-icon *ngIf="!this.expandExtra" class="icon" (click)="expand('extra')"
+      >keyboard_arrow_right</mat-icon
+    >
+    <mat-icon *ngIf="this.expandExtra" class="icon" (click)="expand('extra')"
+      >keyboard_arrow_left</mat-icon
+    >
+  </h3>
 
   <footer>copyright 2022 &copy; offBurguer</footer>
 </div>
