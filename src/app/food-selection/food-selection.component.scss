@@ -22,11 +22,13 @@
   list-style-type: none;
   height: 26rem;
   margin-left: -6rem;
-  font-weight: 450;
+  font-weight: 200;
   font-size: 30px;
+
 }
 
 footer {
+  font-weight: 200;
   font-size: 20px;
   padding-top: 22rem;
 }
@@ -37,16 +39,19 @@ li {
 
 
 h1 {
+  font-weight: 700;
   padding-top: 4rem !important;
   font-size: 3rem;
 }
 
 h2 {
+  font-weight: 200;
   font-size: 2rem;
   padding-left: 1rem;
 }
 
 h3 {
+  font-weight: 200;
   display: flex;
   padding-left: 3rem;
 }
@@ -55,6 +60,7 @@ h5 {
   font-size: 4rem;
   width: 55rem;
   margin-left: -5rem;
+  font-weight: 200;
 }
 
 .shadow-card {
@@ -84,6 +90,7 @@ h5 {
 }
 
 .icon {
+  color: antiquewhite;
   font-size: 4rem;
   position: relative;
   top: -1rem;
